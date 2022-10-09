@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User</title>
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+    <!-- MDB -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/5.0.0/mdb.min.css" rel="stylesheet" />
+    <!--jquery lib-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    </head>
+
+<body>
+    <div id="includedContent"></div>
+    
+    <div class="row">
+        <div class="col-3 p-5 border"> 
+            <div class="d-flex justify-content-center">
+                <div class="text-info fs-3">Register User</div>
+            </div>
+            <hr>
+            <div class="mb-3">
+                <label for="userName" class="form-label">UserName</label>
+                <input type="text" class="form-control" id="userNameCrt">
+            </div>
+            <div class="mb-3">
+                <label for="fullName" class="form-label">fullName</label>
+                <input type="text" class="form-control" id="fullNameCrt">
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">email</label>
+                <input type="email" class="form-control" id="emailCrt">
+            </div>
+            <div class="mb-3">
+                <label for="phoneNumber" class="form-label">phoneNumber</label>
+                <input type="text" class="form-control" id="phoneNumberCrt">
+            </div>
+            <button class="btn btn-warning" type="submit" onclick="registerUser()">Create User</button>
+        </div>
+
+        <div class="col-9 p-3 border">
+            <div class="d-flex justify-content-center">
+                <div class="lead text-info">LIST USER IS ACTIVING</div>
+            </div>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">userID</th>
+                        <th scope="col">userName</th>
+                        <th scope="col">fullName</th>
+                        <th scope="col">email</th>
+                        <th scope="col">phoneNumber</th>
+                        <th scope="col"></th>
+                    </tr>
+                </thead>
+                <tbody id="listUserNotDelete">
+                   
+                </tbody>
+            </table>
+            <!--  -->
+            <hr>
+            <div class="mt-5">
+            <div class="d-flex justify-content-center">
+                <div class="text-danger">LIST USER IS SOFT DELETE</div>
+            </div>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">userID</th>
+                        <th scope="col">userName</th>
+                        <th scope="col">fullName</th>
+                        <th scope="col">email</th>
+                        <th scope="col">phoneNumber</th>
+                    </tr>
+                </thead>
+                <tbody id="listUserDelete">
+                    
+                </tbody>
+            </table>
+        </div>
+        </div>
+
+    </div>
+    </div>
+
+    <script>
+        $(function () {
+            $("#includedContent").load("nav.html");
+        });
+    </script>
+    <script src="js/user.js"></script>
+</body>
+
+</html>
